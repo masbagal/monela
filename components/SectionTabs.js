@@ -11,11 +11,11 @@ export default class SectionTabs extends React.Component {
   render() {
     return (
       <View style={styles.tabContainer}>
-        <View style={styles.tab}>
+        <View style={[styles.tab, styles.active]}>
           <Text style={styles.text}>CATEGORY</Text>
         </View>
         <View style={styles.tab}>
-          <Text style={styles.text}>ITEMS </Text>
+          <Text style={styles.text}>ITEMS</Text>
         </View>
       </View>
     );
@@ -23,25 +23,26 @@ export default class SectionTabs extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  white: {
-    color: '#fff',
-  },
   tabContainer: {
-    height: 70,
+    height: 50,
     alignSelf: 'stretch',
-    backgroundColor: '#dfe6e9',
     flexDirection: 'row',
     justifyContent: 'center',
+    borderBottomWidth: 1,
+    borderColor: '#c4c4c4',
   },
   tab: {
     flex: 1, 
     width: '50%',
     alignContent: 'center',
     justifyContent: 'center',
-    borderRightWidth: 1,
     borderColor: '#fff',
   },
+  active: {
+    borderBottomWidth: 5
+  },
   text: {
+    color: '#ffffff',
     textAlign: 'center'
   }
 });

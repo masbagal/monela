@@ -20,12 +20,15 @@ export default class CategoryRow extends React.Component {
 
 const styles = StyleSheet.create({
   rowContainer: {
-      padding: 20,
-      borderBottomWidth: 1,
-      borderColor: '#b2bec3',
-      flexDirection: 'row',
-      alignItems: 'center',
-    },
+    padding: 15,
+    backgroundColor: '#fff',
+    borderBottomWidth: 1,
+    borderColor: '#b2bec3',
+    flexDirection: 'row',
+    marginBottom: 5,
+    alignSelf: 'stretch',
+    borderRadius: 4,
+  },
   textContainer : {
     paddingLeft: 30
   },

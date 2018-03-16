@@ -44,6 +44,7 @@ export default class ListExpensesByCategory extends React.Component {
       <View style={styles.container}>
        <FlatList
           data={data}
+          contentContainerStyle={styles.list}
           renderItem={({item}) => <CategoryRow key={item.id} text={item.id} icon={item.icon} />}
         />
       </View>
@@ -58,26 +59,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 3,
     alignSelf: 'stretch',
-    backgroundColor: '#fff',
+    backgroundColor: '#eaeaea',
   },
-  monthSection: {
-    flex: 1, 
-    alignContent: 'center',
-    justifyContent: 'space-around'
-  },
-  mainSection:{
-      flex: 3,
-      alignItems: 'center',
-      justifyContent: 'space-around',
-  },
-  mainContent: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  message: {
-    fontSize: 16,
-  },
-  amount: {
-    fontSize: 28
+  list: {
+    alignItems: 'stretch',
+    padding: 15,
   }
 });

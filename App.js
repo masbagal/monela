@@ -18,7 +18,6 @@ export default class App extends React.Component {
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <HeroBannerSummary />
-        <SectionTabs />
         <ListExpensesByCategory />
 
       </ScrollView>

@@ -5,11 +5,13 @@ import {
   View, 
 } from 'react-native';
 import MonthItem from '../micro-components/MonthItem';
+import SectionTabs from './SectionTabs';
+import { LinearGradient } from 'expo'; 
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <LinearGradient colors={['#39e5b6', '#70b2d9']} style={styles.container}>
         <View style={styles.monthSection}>      
           <MonthItem text='MAR 2018' />
         </View>
@@ -19,7 +21,8 @@ export default class App extends React.Component {
             <Text style={[styles.amount, styles.white]}>Rp. 267.500</Text>
           </View>
         </View>
-      </View>
+        <SectionTabs />
+      </LinearGradient>
     );
   }
 }
@@ -29,13 +32,14 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   container: {
-    flex: 2,
+    flex: 3,
     alignSelf: 'stretch',
     backgroundColor: '#0fb9b1',
     alignItems: 'center',
     justifyContent: 'center',
   },
   monthSection: {
+    paddingTop: 30,
     flex: 1, 
     alignContent: 'center',
     justifyContent: 'space-around'
